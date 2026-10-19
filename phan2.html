@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phần 2 - Form Đăng Ký Học Viên</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            padding: 30px 15px;
+        }
+        .form-card {
+            max-width: 550px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-size: 22px;
+        }
+        .field-group {
+            margin-bottom: 18px;
+        }
+        .field-group label.title {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #34495e;
+        }
+        .field-group input[type="text"],
+        .field-group input[type="email"],
+        .field-group input[type="date"],
+        .field-group select,
+        .field-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .field-group textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        .options-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .options-group label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .btn-submit {
+            background-color: #27ae60;
+            color: white;
+        }
+        .btn-submit:hover {
+            background-color: #219150;
+        }
+        .btn-reset {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .btn-reset:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-card">
+    <h2>Đăng Ký Học Viên</h2>
+    <form action="#" method="POST">
+        
+        <!-- Họ và tên -->
+        <div class="field-group">
+            <label class="title" for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required>
+        </div>
+
+        <!-- Email -->
+        <div class="field-group">
+            <label class="title" for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+        </div>
+
+        <!-- Số điện thoại -->
+        <div class="field-group">
+            <label class="title" for="phone">Số điện thoại:</label>
+            <input type="text" id="phone" name="phone" placeholder="0901234567" required>
+        </div>
+
+        <!-- Ngày sinh -->
+        <div class="field-group">
+            <label class="title" for="birthday">Ngày sinh:</label>
+            <input type="date" id="birthday" name="birthday" required>
+        </div>
+
+        <!-- Giới tính -->
+        <div class="field-group">
+            <label class="title">Giới tính:</label>
+            <div class="options-group">
+                <label><input type="radio" name="gender" value="Nam" checked> Nam</label>
+                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                <label><input type="radio" name="gender" value="Khác"> Khác</label>
+            </div>
+        </div>
+
+        <!-- Địa chỉ -->
+        <div class="field-group">
+            <label class="title" for="address">Địa chỉ:</label>
+            <textarea id="address" name="address" placeholder="Nhập địa chỉ của bạn..."></textarea>
+        </div>
+
+        <!-- Khóa học -->
+        <div class="field-group">
+            <label class="title" for="course">Khóa học:</label>
+            <select id="course" name="course">
+                <option value="HTML & CSS">HTML & CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+            </select>
+        </div>
+
+        <!-- Hình thức học -->
+        <div class="field-group">
+            <label class="title">Hình thức học:</label>
+            <div class="options-group">
+                <label><input type="radio" name="study_type" value="Online" checked> Online</label>
+                <label><input type="radio" name="study_type" value="Offline"> Offline</label>
+            </div>
+        </div>
+
+        <!-- Sở thích -->
+        <div class="field-group">
+            <label class="title">Sở thích:</label>
+            <div class="options-group">
+                <label><input type="checkbox" name="hobby" value="Lập trình"> Lập trình</label>
+                <label><input type="checkbox" name="hobby" value="Đọc sách"> Đọc sách</label>
+                <label><input type="checkbox" name="hobby" value="Chơi game"> Chơi game</label>
+            </div>
+        </div>
+
+        <!-- Ghi chú -->
+        <div class="field-group">
+            <label class="title" for="note">Ghi chú:</label>
+            <textarea id="note" name="note" placeholder="Ghi chú thêm (nếu có)..."></textarea>
+        </div>
+
+        <!-- Các nút gửi/nhập lại -->
+        <div class="button-group">
+            <button type="submit" class="btn btn-submit">Đăng ký</button>
+            <button type="reset" class="btn btn-reset">Nhập lại</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
